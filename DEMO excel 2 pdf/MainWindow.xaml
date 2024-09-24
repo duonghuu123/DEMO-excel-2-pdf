@@ -1,0 +1,32 @@
+﻿<Window x:Class="DEMO_excel_2_pdf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DEMO_excel_2_pdf"
+        mc:Ignorable="d"
+        Title="Excel to PDF Converter" Height="500" Width="800" Background="#f0f4f7">
+
+    <Grid Margin="10">
+        <!-- Header -->
+        <TextBlock Text="Excel to PDF Converter" FontSize="24" FontWeight="Bold" Foreground="#00539C" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+
+        <!-- File selection -->
+        <Label Content="Select Excel File:" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0" Foreground="#00539C"/>
+        <TextBox Name="txtFilePath" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,80,0,0" Width="600" Height="30" IsReadOnly="True" Background="#ffffff" BorderBrush="#00539C" FontSize="14"/>
+        <Button Content="Browse" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,80,10,0" Width="120" Height="30" Background="#0078D7" Foreground="White" FontSize="14" Click="Browse_Click"/>
+
+        <!-- Convert to PDF -->
+        <Button Content="Convert to PDF" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,130,0,0" Width="150" Height="30" Background="#28a745" Foreground="White" FontSize="14" Click="ConvertToPDF_Click"/>
+
+        <!-- Email functionality -->
+        <Label Content="Enter Email Addresses (comma-separated):" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,180,0,0" Foreground="#00539C"/>
+        <TextBox Name="txtEmailList" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,210,0,0" Width="600" Height="30" Background="#ffffff" BorderBrush="#00539C" FontSize="14" AcceptsReturn="True" TextWrapping="Wrap"/>
+
+        <!-- Send Email Button -->
+        <Button Content="Send PDF" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,260,0,0" Width="150" Height="30" Background="#f4511e" Foreground="White" FontSize="14" Click="SendEmail_Click"/>
+
+        <!-- Status messages -->
+        <TextBlock Name="txtStatus" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,320,0,0" FontSize="14" Foreground="Green"/>
+    </Grid>
+</Window>
